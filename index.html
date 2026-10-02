@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Varshith Reddy Palla — Software & Automation Engineer working across Python, automation, APIs, automotive software, testing, and AI-powered workflows." />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Varshith Reddy Palla | Software & Automation Engineer</title>
+  <meta name="description" content="Portfolio von Varshith Reddy Palla – Software- und Automatisierungsingenieur mit Schwerpunkten in Python, Automatisierung, APIs, Fahrzeugsoftware, Testing und KI-gestützten Workflows." />
+  <meta name="theme-color" content="#f8fafc" />
+  <script src="preferences.js"></script>
+  <title>Varshith Reddy Palla | Software- und Automatisierungsingenieur</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -20,17 +21,29 @@
     <div class="container nav-wrap">
       <a class="brand" href="#top">Varshith Reddy Palla<span>.</span></a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="mainNav">
         <span></span><span></span><span></span>
       </button>
 
       <nav class="nav" id="mainNav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">Über mich</a>
+        <a href="#projects" data-i18n="nav.projects">Projekte</a>
+        <a href="#experience" data-i18n="nav.experience">Erfahrung</a>
+        <a href="#skills" data-i18n="nav.skills">Kenntnisse</a>
+        <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+        <a href="assets/lebenslauf.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" hreflang="de" data-i18n="nav.cv">Lebenslauf</a>
       </nav>
+      <div class="display-controls">
+        <label class="sr-only" for="languageSelect" data-i18n="controls.language">Sprache</label>
+        <select id="languageSelect" class="display-control">
+          <option value="de" lang="de">Deutsch</option>
+          <option value="en" lang="en">English</option>
+        </select>
+        <button type="button" class="display-control theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Dunkles Design aktivieren">
+          <span id="themeIcon" aria-hidden="true">☾</span>
+          <span id="themeLabel">Dunkel</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -40,24 +53,22 @@
         <div class="hero-copy reveal">
           <div class="eyebrow">SOFTWARE · AUTOMATION · ENGINEERING</div>
           <h1>
-            I build software that
-            <span class="gradient-text">removes repetitive work.</span>
+            <span data-i18n="hero.intro">Ich entwickle Software, die</span>
+            <span class="gradient-text" data-i18n="hero.headline">Routinearbeit abnimmt.</span>
           </h1>
           <p class="hero-text">
-            I'm <strong>Varshith Reddy Palla</strong>, a Software & Automation Engineer with an
-            M.Eng. background in Mechatronics & Robotics. I work across Python development,
-            workflow automation, APIs, testing, automotive software, data processing and AI-powered tools.
+            <span data-i18n="hero.greeting">Ich bin</span> <strong>Varshith Reddy Palla</strong><span data-i18n="hero.bio">, Software- und Automatisierungsingenieur mit einem M.Eng. in Mechatronik und Robotik. Meine Schwerpunkte sind Python-Entwicklung, Workflow-Automatisierung, APIs, Testing, Fahrzeugsoftware, Datenverarbeitung und KI-gestützte Werkzeuge.</span>
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">Explore Projects</a>
-            <a class="btn btn-secondary" href="mailto:varshithreddy.palla@gmail.com">Contact Me</a>
+            <a class="btn btn-primary" href="#projects" data-i18n="hero.projects">Projekte entdecken</a>
+            <a class="btn btn-secondary" href="mailto:varshithreddy.palla@gmail.com" data-i18n="hero.contact">Kontakt aufnehmen</a>
           </div>
 
           <div class="hero-links">
             <a href="https://github.com/VarshithReddyPalla" target="_blank" rel="noreferrer">GitHub ↗</a>
             <a href="https://www.linkedin.com/in/varshith-reddy-palla/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-            <a href="mailto:varshithreddy.palla@gmail.com">Email ↗</a>
+            <a href="mailto:varshithreddy.palla@gmail.com" data-i18n="hero.email">E-Mail ↗</a>
           </div>
         </div>
 
@@ -88,37 +99,30 @@
 
     <section class="quick-strip">
       <div class="container quick-grid">
-        <div><span>01</span><strong>Python-first</strong><p>Applications, APIs, automation and data tooling.</p></div>
-        <div><span>02</span><strong>Systems mindset</strong><p>Software connected to real engineering workflows.</p></div>
-        <div><span>03</span><strong>Automation driven</strong><p>Reduce manual steps and make processes repeatable.</p></div>
-        <div><span>04</span><strong>Always building</strong><p>AI agents, developer tools and workflow experiments.</p></div>
+        <div><span>01</span><strong data-i18n="quick.python.title">Python im Fokus</strong><p data-i18n="quick.python.body">Anwendungen, APIs, Automatisierung und Datenwerkzeuge.</p></div>
+        <div><span>02</span><strong data-i18n="quick.systems.title">Systemdenken</strong><p data-i18n="quick.systems.body">Software für reale Arbeitsabläufe in der Entwicklung.</p></div>
+        <div><span>03</span><strong data-i18n="quick.automation.title">Automatisierung als Antrieb</strong><p data-i18n="quick.automation.body">Manuelle Schritte reduzieren und Prozesse wiederholbar machen.</p></div>
+        <div><span>04</span><strong data-i18n="quick.building.title">Ständig am Entwickeln</strong><p data-i18n="quick.building.body">KI-Agenten, Entwicklerwerkzeuge und neue Workflow-Ideen.</p></div>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="container two-col">
         <div class="section-heading reveal">
-          <div class="eyebrow purple">ABOUT</div>
-          <h2>From physical systems to software systems.</h2>
+          <div class="eyebrow purple" data-i18n="about.eyebrow">ÜBER MICH</div>
+          <h2 data-i18n="about.title">Von physischen Systemen zu Softwaresystemen.</h2>
         </div>
 
         <div class="about-copy reveal">
-          <p>
-            My engineering path started with Mechanical Engineering, moved through Mechatronics & Robotics,
-            and increasingly shifted toward software: embedded systems, automotive validation, Python automation,
-            backend services, APIs and intelligent workflows.
-          </p>
-          <p>
-            I enjoy projects where software has a clear purpose — removing repetitive steps, connecting fragmented tools,
-            improving testability or helping engineers understand data faster.
-          </p>
+          <p data-i18n="about.path">Mein Weg begann im Maschinenbau, führte über Mechatronik und Robotik und verlagerte sich zunehmend zur Software: eingebettete Systeme, Fahrzeugvalidierung, Python-Automatisierung, Backend-Dienste, APIs und intelligente Workflows.</p>
+          <p data-i18n="about.purpose">Ich arbeite gerne an Projekten, bei denen Software einen klaren Zweck erfüllt: wiederkehrende Schritte vermeiden, einzelne Werkzeuge verbinden, die Testbarkeit verbessern oder Ingenieuren helfen, Daten schneller zu verstehen.</p>
 
           <div class="journey">
-            <span>Mechanical Engineering</span><b>→</b>
-            <span>Mechatronics & Robotics</span><b>→</b>
-            <span>Automotive Software</span><b>→</b>
-            <span>Python & Automation</span><b>→</b>
-            <span>AI-enabled Software</span>
+            <span data-i18n="journey.mechanical">Maschinenbau</span><b>→</b>
+            <span data-i18n="journey.mechatronics">Mechatronik und Robotik</span><b>→</b>
+            <span data-i18n="journey.automotive">Fahrzeugsoftware</span><b>→</b>
+            <span data-i18n="journey.python">Python und Automatisierung</span><b>→</b>
+            <span data-i18n="journey.ai">KI-gestützte Software</span>
           </div>
         </div>
       </div>
@@ -127,136 +131,136 @@
     <section class="section section-alt" id="projects">
       <div class="container">
         <div class="section-heading center reveal">
-          <div class="eyebrow blue">SELECTED WORK</div>
-          <h2>Projects built around real problems.</h2>
-          <p>Personal projects, engineering systems and selected professional work described without confidential implementation details.</p>
+          <div class="eyebrow blue" data-i18n="projects.eyebrow">AUSGEWÄHLTE ARBEITEN</div>
+          <h2 data-i18n="projects.title">Projekte für konkrete Herausforderungen.</h2>
+          <p data-i18n="projects.description">Eigene Projekte, technische Systeme und ausgewählte berufliche Arbeiten – ohne vertrauliche Implementierungsdetails.</p>
         </div>
 
         <div class="filter-row reveal">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="personal">Personal</button>
-          <button class="filter" data-filter="automation">Automation</button>
-          <button class="filter" data-filter="automotive">Automotive</button>
-          <button class="filter" data-filter="ai">AI</button>
+          <button class="filter active" data-filter="all" data-i18n="filter.all">Alle</button>
+          <button class="filter" data-filter="personal" data-i18n="filter.personal">Eigene Projekte</button>
+          <button class="filter" data-filter="automation" data-i18n="filter.automation">Automatisierung</button>
+          <button class="filter" data-filter="automotive" data-i18n="filter.automotive">Automobiltechnik</button>
+          <button class="filter" data-filter="ai" data-i18n="filter.ai">KI</button>
         </div>
 
         <div class="projects-grid">
           <article class="project-card featured reveal" data-tags="personal automation ai">
             <div class="project-meta">
               <span class="project-number">01</span>
-              <span class="pill purple-pill">In Development</span>
+              <span class="pill purple-pill" data-i18n="status.development">In Entwicklung</span>
             </div>
-            <h3>AI Job Application Agent</h3>
-            <p class="project-lead">An AI-assisted workflow for reducing repetitive work across job applications.</p>
+            <h3 data-i18n="projects.job.title">KI-Bewerbungsassistent</h3>
+            <p class="project-lead" data-i18n="projects.job.lead">Ein KI-gestützter Workflow, der wiederkehrende Arbeit bei Bewerbungen reduziert.</p>
             <div class="project-block">
-              <strong>Problem</strong>
-              <p>Repeatedly reading job descriptions, matching experience, preparing documents and tracking applications wastes time.</p>
-            </div>
-            <div class="project-block">
-              <strong>Architecture</strong>
-              <p>Job description + structured candidate profile → AI matching → structured application output → document/workflow modules.</p>
+              <strong data-i18n="project.problem">Problem</strong>
+              <p data-i18n="projects.job.problem">Stellenbeschreibungen wiederholt lesen, Erfahrungen abgleichen, Unterlagen vorbereiten und Bewerbungen nachverfolgen kostet Zeit.</p>
             </div>
             <div class="project-block">
-              <strong>Outcome</strong>
-              <p>A reusable system designed to keep candidate information structured while tailoring application material per role.</p>
+              <strong data-i18n="project.architecture">Architektur</strong>
+              <p data-i18n="projects.job.architecture">Stellenbeschreibung + strukturiertes Bewerberprofil → KI-Abgleich → strukturierte Bewerbungsdaten → Dokument- und Workflow-Module.</p>
+            </div>
+            <div class="project-block">
+              <strong data-i18n="project.outcome">Ergebnis</strong>
+              <p data-i18n="projects.job.outcome">Ein wiederverwendbares System, das Bewerberdaten strukturiert verwaltet und Bewerbungsunterlagen an die jeweilige Stelle anpasst.</p>
             </div>
             <div class="tags">
-              <span>Python</span><span>LLMs</span><span>AI Agents</span><span>REST APIs</span><span>n8n</span><span>Docker</span>
+              <span>Python</span><span>LLMs</span><span data-i18n="tags.agents">KI-Agenten</span><span>REST APIs</span><span>n8n</span><span>Docker</span>
             </div>
           </article>
 
           <article class="project-card reveal" data-tags="personal automation">
             <div class="project-meta">
               <span class="project-number">02</span>
-              <span class="pill blue-pill">Personal Tool</span>
+              <span class="pill blue-pill" data-i18n="status.personal">Eigenes Werkzeug</span>
             </div>
-            <h3>CV Studio — Editor & PDF Generator</h3>
-            <p class="project-lead">A local CV management system where content lives as structured data instead of inside documents.</p>
+            <h3 data-i18n="projects.cv.title">CV Studio – Editor und PDF-Generator</h3>
+            <p class="project-lead" data-i18n="projects.cv.lead">Ein lokales System zur Lebenslaufverwaltung, das Inhalte als strukturierte Daten statt in einzelnen Dokumenten speichert.</p>
             <div class="project-block">
-              <strong>Problem</strong>
-              <p>Maintaining multiple CV versions manually causes duplication, inconsistencies and slow tailoring.</p>
-            </div>
-            <div class="project-block">
-              <strong>Architecture</strong>
-              <p>Browser editor → JSON profile data → reusable template engine → HTML/CSS → generated PDF.</p>
+              <strong data-i18n="project.problem">Problem</strong>
+              <p data-i18n="projects.cv.problem">Mehrere Lebenslaufversionen manuell zu pflegen führt zu doppelten Inhalten, Inkonsistenzen und aufwendigen Anpassungen.</p>
             </div>
             <div class="project-block">
-              <strong>Outcome</strong>
-              <p>The CVs I use for applications are generated by this tool. It is also being integrated as the document-generation module of the AI Job Application Agent.</p>
+              <strong data-i18n="project.architecture">Architektur</strong>
+              <p data-i18n="projects.cv.architecture">Browser-Editor → JSON-Profildaten → wiederverwendbare Vorlagen-Engine → HTML/CSS → generiertes PDF.</p>
+            </div>
+            <div class="project-block">
+              <strong data-i18n="project.outcome">Ergebnis</strong>
+              <p data-i18n="projects.cv.outcome">Meine Lebensläufe für Bewerbungen werden mit diesem Werkzeug erstellt. Es wird außerdem als Modul zur Dokumenterstellung in den KI-Bewerbungsassistenten integriert.</p>
             </div>
             <div class="tags">
-              <span>Python</span><span>JSON</span><span>HTML/CSS</span><span>Templates</span><span>PDF Generation</span>
+              <span>Python</span><span>JSON</span><span>HTML/CSS</span><span data-i18n="tags.templates">Vorlagen</span><span data-i18n="tags.pdfGeneration">PDF-Erstellung</span>
             </div>
           </article>
 
           <article class="project-card reveal" data-tags="automation automotive">
             <div class="project-meta">
               <span class="project-number">03</span>
-              <span class="pill orange-pill">Professional</span>
+              <span class="pill orange-pill" data-i18n="status.professional">Beruflich</span>
             </div>
-            <h3>Enterprise Test Workflow Automation</h3>
-            <p class="project-lead">End-to-end orchestration for a multi-step automotive test execution workflow.</p>
+            <h3 data-i18n="projects.workflow.title">Automatisierung betrieblicher Testabläufe</h3>
+            <p class="project-lead" data-i18n="projects.workflow.lead">Durchgängige Orchestrierung eines mehrstufigen Testablaufs im Automotive-Bereich.</p>
             <div class="project-block">
-              <strong>Problem</strong>
-              <p>Engineers manually collected logs, retrieved backend data, executed analysis tools, uploaded results and updated Jira/Xray.</p>
-            </div>
-            <div class="project-block">
-              <strong>Architecture</strong>
-              <p>Local UI → file/log collection → Selenium → external analysis tool → metadata/results → cloud sync → Jira/Xray APIs.</p>
+              <strong data-i18n="project.problem">Problem</strong>
+              <p data-i18n="projects.workflow.problem">Ingenieure sammelten manuell Logs, riefen Backend-Daten ab, führten Analysewerkzeuge aus, luden Ergebnisse hoch und aktualisierten Jira/Xray.</p>
             </div>
             <div class="project-block">
-              <strong>Outcome</strong>
-              <p>Converted fragmented manual tasks into a repeatable operator-driven workflow with persistent state and structured logging.</p>
+              <strong data-i18n="project.architecture">Architektur</strong>
+              <p data-i18n="projects.workflow.architecture">Lokale Oberfläche → Datei- und Logsammlung → Selenium → externes Analysewerkzeug → Metadaten/Ergebnisse → Cloud-Synchronisierung → Jira/Xray-APIs.</p>
+            </div>
+            <div class="project-block">
+              <strong data-i18n="project.outcome">Ergebnis</strong>
+              <p data-i18n="projects.workflow.outcome">Einzelne manuelle Aufgaben wurden zu einem wiederholbaren, bedienergesteuerten Workflow mit dauerhaft gespeichertem Zustand und strukturierter Protokollierung verbunden.</p>
             </div>
             <div class="tags">
               <span>Python</span><span>Selenium</span><span>REST APIs</span><span>Jira API</span><span>Xray</span><span>SharePoint</span>
             </div>
-            <p class="confidential">Professional project — proprietary code, internal systems and confidential data are intentionally excluded.</p>
+            <p class="confidential" data-i18n="projects.workflow.confidential">Berufliches Projekt – proprietärer Code, interne Systeme und vertrauliche Daten sind bewusst ausgeschlossen.</p>
           </article>
 
           <article class="project-card reveal" data-tags="automation automotive">
             <div class="project-meta">
               <span class="project-number">04</span>
-              <span class="pill orange-pill">Professional</span>
+              <span class="pill orange-pill" data-i18n="status.professional">Beruflich</span>
             </div>
-            <h3>Automotive Test Automation Framework</h3>
-            <p class="project-lead">A modular framework for real-time ECU and vehicle-function validation.</p>
+            <h3 data-i18n="projects.test.title">Framework zur Testautomatisierung im Fahrzeugbereich</h3>
+            <p class="project-lead" data-i18n="projects.test.lead">Ein modulares Framework zur Echtzeitvalidierung von Steuergeräten und Fahrzeugfunktionen.</p>
             <div class="project-block">
-              <strong>Problem</strong>
-              <p>Real-vehicle validation needed user-friendly real-time support to reduce cognitive load during test drives.</p>
-            </div>
-            <div class="project-block">
-              <strong>Architecture</strong>
-              <p>Event-driven Python framework → signal processing → automated checks → REST layer → live browser UI + TTS feedback.</p>
+              <strong data-i18n="project.problem">Problem</strong>
+              <p data-i18n="projects.test.problem">Für die Validierung im realen Fahrzeug war eine benutzerfreundliche Echtzeitunterstützung nötig, um die kognitive Belastung bei Testfahrten zu verringern.</p>
             </div>
             <div class="project-block">
-              <strong>Outcome</strong>
-              <p>Reusable automated tests, live validation feedback and automated reporting across SiL/HiL and vehicle environments.</p>
+              <strong data-i18n="project.architecture">Architektur</strong>
+              <p data-i18n="projects.test.architecture">Ereignisgesteuertes Python-Framework → Signalverarbeitung → automatisierte Prüfungen → REST-Schicht → Live-Browseroberfläche + Sprachausgabe.</p>
+            </div>
+            <div class="project-block">
+              <strong data-i18n="project.outcome">Ergebnis</strong>
+              <p data-i18n="projects.test.outcome">Wiederverwendbare automatisierte Tests, Live-Rückmeldungen zur Validierung und automatisierte Berichte in SiL-/HiL- und Fahrzeugumgebungen.</p>
             </div>
             <div class="tags">
               <span>Python</span><span>SiL/HiL</span><span>ETAS INCA</span><span>ControlDesk</span><span>REST APIs</span><span>JavaScript</span>
             </div>
-            <p class="confidential">Professional project — public description contains only non-confidential concepts.</p>
+            <p class="confidential" data-i18n="projects.test.confidential">Berufliches Projekt – die öffentliche Beschreibung enthält ausschließlich nicht vertrauliche Konzepte.</p>
           </article>
 
           <article class="project-card reveal" data-tags="automation automotive">
             <div class="project-meta">
               <span class="project-number">05</span>
-              <span class="pill orange-pill">Professional</span>
+              <span class="pill orange-pill" data-i18n="status.professional">Beruflich</span>
             </div>
-            <h3>Diagnostic Data Automation</h3>
-            <p class="project-lead">Python tooling for processing and comparing ECU and diagnostic data.</p>
+            <h3 data-i18n="projects.diagnostics.title">Automatisierung von Diagnosedaten</h3>
+            <p class="project-lead" data-i18n="projects.diagnostics.lead">Python-Werkzeuge zur Verarbeitung und zum Vergleich von Steuergeräte- und Diagnosedaten.</p>
             <div class="project-block">
-              <strong>Problem</strong>
-              <p>Diagnostic datasets across XML, ODX, ECU and spreadsheet formats required repetitive manual comparison.</p>
-            </div>
-            <div class="project-block">
-              <strong>Architecture</strong>
-              <p>Source datasets → Python extraction → normalization → comparison → technical analysis.</p>
+              <strong data-i18n="project.problem">Problem</strong>
+              <p data-i18n="projects.diagnostics.problem">Diagnosedaten in XML-, ODX-, Steuergeräte- und Tabellenformaten erforderten wiederholte manuelle Vergleiche.</p>
             </div>
             <div class="project-block">
-              <strong>Outcome</strong>
-              <p>Reduced manual analysis effort by approximately 80% in one recurring workflow.</p>
+              <strong data-i18n="project.architecture">Architektur</strong>
+              <p data-i18n="projects.diagnostics.architecture">Quelldaten → Python-Extraktion → Normalisierung → Vergleich → technische Analyse.</p>
+            </div>
+            <div class="project-block">
+              <strong data-i18n="project.outcome">Ergebnis</strong>
+              <p data-i18n="projects.diagnostics.outcome">Der manuelle Analyseaufwand wurde in einem wiederkehrenden Workflow um etwa 80 % reduziert.</p>
             </div>
             <div class="tags">
               <span>Python</span><span>pandas</span><span>NumPy</span><span>XML</span><span>ODX</span><span>UDS</span>
@@ -266,32 +270,32 @@
           <article class="project-card reveal" data-tags="personal automation">
             <div class="project-meta">
               <span class="project-number">06</span>
-              <span class="pill purple-pill">Utility</span>
+              <span class="pill purple-pill" data-i18n="status.utility">Hilfswerkzeug</span>
             </div>
-            <h3>PDF Utility Toolkit</h3>
-            <p class="project-lead">Reusable Python utilities for common PDF-processing and file-handling tasks.</p>
+            <h3 data-i18n="projects.pdf.title">PDF-Werkzeugsammlung</h3>
+            <p class="project-lead" data-i18n="projects.pdf.lead">Wiederverwendbare Python-Werkzeuge für typische Aufgaben der PDF-Verarbeitung und Dateiverwaltung.</p>
             <div class="project-block">
-              <strong>Focus</strong>
-              <p>Document validation, controlled PDF processing and command-line workflows for files I own or am authorized to modify.</p>
+              <strong data-i18n="project.focus">Schwerpunkt</strong>
+              <p data-i18n="projects.pdf.focus">Dokumentenprüfung, kontrollierte PDF-Verarbeitung und Kommandozeilen-Workflows für eigene Dateien oder Dateien, zu deren Bearbeitung ich berechtigt bin.</p>
             </div>
             <div class="tags">
-              <span>Python</span><span>PDF Processing</span><span>CLI</span><span>File Automation</span>
+              <span>Python</span><span data-i18n="tags.pdfProcessing">PDF-Verarbeitung</span><span>CLI</span><span data-i18n="tags.files">Dateiautomatisierung</span>
             </div>
           </article>
 
           <article class="project-card reveal" data-tags="personal automotive">
             <div class="project-meta">
               <span class="project-number">07</span>
-              <span class="pill blue-pill">Embedded</span>
+              <span class="pill blue-pill" data-i18n="status.embedded">Eingebettete Systeme</span>
             </div>
-            <h3>Embedded ECU Controller</h3>
-            <p class="project-lead">Microcontroller-based control software with safety-oriented behavior.</p>
+            <h3 data-i18n="projects.ecu.title">Eingebettete Steuergerätesoftware</h3>
+            <p class="project-lead" data-i18n="projects.ecu.lead">Mikrocontrollerbasierte Steuerungssoftware mit sicherheitsorientiertem Verhalten.</p>
             <div class="project-block">
-              <strong>Outcome</strong>
-              <p>Built state-based control logic with sensor/actuator integration and fail-safe handling.</p>
+              <strong data-i18n="project.outcome">Ergebnis</strong>
+              <p data-i18n="projects.ecu.outcome">Entwicklung einer zustandsbasierten Steuerungslogik mit Sensor-/Aktorintegration und sicherem Verhalten im Fehlerfall.</p>
             </div>
             <div class="tags">
-              <span>C</span><span>Microcontrollers</span><span>Embedded Systems</span><span>Control Logic</span>
+              <span>C</span><span data-i18n="tags.microcontrollers">Mikrocontroller</span><span data-i18n="tags.embedded">Eingebettete Systeme</span><span data-i18n="tags.control">Steuerungslogik</span>
             </div>
           </article>
 
@@ -300,14 +304,14 @@
               <span class="project-number">08</span>
               <span class="pill blue-pill">Simulation</span>
             </div>
-            <h3>Battery Electric Vehicle Simulation</h3>
-            <p class="project-lead">MATLAB/Simulink model for EV energy and battery-system analysis.</p>
+            <h3 data-i18n="projects.ev.title">Simulation eines batterieelektrischen Fahrzeugs</h3>
+            <p class="project-lead" data-i18n="projects.ev.lead">MATLAB-/Simulink-Modell zur Energie- und Batteriesystemanalyse von Elektrofahrzeugen.</p>
             <div class="project-block">
-              <strong>Outcome</strong>
-              <p>Modeled vehicle dynamics, battery behavior, energy consumption, regenerative braking and SOC/SOH concepts.</p>
+              <strong data-i18n="project.outcome">Ergebnis</strong>
+              <p data-i18n="projects.ev.outcome">Modellierung von Fahrzeugdynamik, Batterieverhalten, Energieverbrauch, Rekuperation sowie SOC-/SOH-Konzepten.</p>
             </div>
             <div class="tags">
-              <span>MATLAB</span><span>Simulink</span><span>EV Modeling</span><span>Battery Systems</span>
+              <span>MATLAB</span><span>Simulink</span><span data-i18n="tags.ev">Elektrofahrzeugmodellierung</span><span data-i18n="tags.battery">Batteriesysteme</span>
             </div>
           </article>
         </div>
@@ -317,8 +321,8 @@
     <section class="section" id="experience">
       <div class="container">
         <div class="section-heading reveal">
-          <div class="eyebrow orange">EXPERIENCE</div>
-          <h2>Engineering experience across software, testing and automotive systems.</h2>
+          <div class="eyebrow orange" data-i18n="experience.eyebrow">BERUFSERFAHRUNG</div>
+          <h2 data-i18n="experience.title">Entwicklungserfahrung mit Software, Tests und Fahrzeugsystemen.</h2>
         </div>
 
         <div class="timeline">
@@ -326,11 +330,8 @@
             <div class="timeline-date">2026</div>
             <div class="timeline-content">
               <h3>Porsche Engineering Services GmbH</h3>
-              <p class="role">Digitalization & Data-Driven Software Development</p>
-              <p>
-                Worked on Python-based automation, software/integration testing, connected-vehicle workflows,
-                backend/log analysis, API integrations and AI-assisted vehicle-function prototypes.
-              </p>
+              <p class="role" data-i18n="experience.porsche.role">Digitalisierung und datengetriebene Softwareentwicklung</p>
+              <p data-i18n="experience.porsche.body">Arbeit an Python-basierter Automatisierung, Software- und Integrationstests, Workflows für vernetzte Fahrzeuge, Backend- und Loganalysen, API-Integrationen und KI-gestützten Prototypen für Fahrzeugfunktionen.</p>
               <div class="tags small">
                 <span>Python</span><span>Selenium</span><span>REST APIs</span><span>Azure</span><span>GitLab</span><span>LLMs</span>
               </div>
@@ -341,11 +342,8 @@
             <div class="timeline-date">2025–2026</div>
             <div class="timeline-content">
               <h3>AUDI AG</h3>
-              <p class="role">Master Thesis — Test Automation & System Validation</p>
-              <p>
-                Developed a modular Python-based test framework integrating simulation, measurement and vehicle environments,
-                with automated checks, REST communication, visualization and reporting.
-              </p>
+              <p class="role" data-i18n="experience.thesis.role">Masterarbeit – Testautomatisierung und Systemvalidierung</p>
+              <p data-i18n="experience.thesis.body">Entwicklung eines modularen Python-Testframeworks zur Integration von Simulations-, Mess- und Fahrzeugumgebungen mit automatisierten Prüfungen, REST-Kommunikation, Visualisierung und Berichterstellung.</p>
               <div class="tags small">
                 <span>Python</span><span>ETAS INCA</span><span>SiL/HiL</span><span>REST APIs</span><span>JavaScript</span>
               </div>
@@ -356,11 +354,8 @@
             <div class="timeline-date">2025</div>
             <div class="timeline-content">
               <h3>AUDI AG</h3>
-              <p class="role">Vehicle Diagnostics, OTA & Data Analysis</p>
-              <p>
-                Built Python tools for diagnostic-data processing and automation, supported UDS/OTA workflows,
-                and reduced manual analysis effort significantly in a recurring process.
-              </p>
+              <p class="role" data-i18n="experience.audi.role">Fahrzeugdiagnose, OTA und Datenanalyse</p>
+              <p data-i18n="experience.audi.body">Entwicklung von Python-Werkzeugen zur Diagnosedatenverarbeitung und Automatisierung, Unterstützung von UDS-/OTA-Workflows und deutliche Reduzierung des manuellen Analyseaufwands in einem wiederkehrenden Prozess.</p>
               <div class="tags small">
                 <span>Python</span><span>UDS</span><span>ODX</span><span>XML</span><span>OTA</span><span>REST APIs</span>
               </div>
@@ -373,50 +368,50 @@
     <section class="section section-alt" id="skills">
       <div class="container">
         <div class="section-heading center reveal">
-          <div class="eyebrow green">TOOLBOX</div>
-          <h2>Technologies I work with.</h2>
+          <div class="eyebrow green" data-i18n="skills.eyebrow">WERKZEUGE</div>
+          <h2 data-i18n="skills.title">Technologien, mit denen ich arbeite.</h2>
         </div>
 
         <div class="skills-grid">
           <div class="skill-card reveal">
             <div class="skill-icon blue-bg">⌨</div>
-            <h3>Languages</h3>
+            <h3 data-i18n="skills.languages">Programmiersprachen</h3>
             <p>Python · C · JavaScript · HTML/CSS · Kotlin</p>
           </div>
           <div class="skill-card reveal">
             <div class="skill-icon green-bg">↔</div>
-            <h3>Backend & APIs</h3>
+            <h3 data-i18n="skills.backend">Backend und APIs</h3>
             <p>FastAPI · REST APIs · JSON · XML · YAML</p>
           </div>
           <div class="skill-card reveal">
             <div class="skill-icon purple-bg">⚙</div>
-            <h3>Automation & Testing</h3>
-            <p>Selenium · API Testing · E2E Testing · Gherkin · Test Automation</p>
+            <h3 data-i18n="skills.automation">Automatisierung und Testing</h3>
+            <p data-i18n="skills.testing.body">Selenium · API-Tests · E2E-Tests · Gherkin · Testautomatisierung</p>
           </div>
           <div class="skill-card reveal">
-            <div class="skill-icon pink-bg">AI</div>
-            <h3>Data & AI</h3>
-            <p>pandas · NumPy · LLMs · AI Agents · Sentence Transformers</p>
+            <div class="skill-icon pink-bg" data-i18n="filter.ai">KI</div>
+            <h3 data-i18n="skills.data">Daten und KI</h3>
+            <p data-i18n="skills.ai.body">pandas · NumPy · LLMs · KI-Agenten · Sentence Transformers</p>
           </div>
           <div class="skill-card reveal">
             <div class="skill-icon cyan-bg">☁</div>
-            <h3>Dev & Cloud</h3>
+            <h3 data-i18n="skills.cloud">Entwicklung und Cloud</h3>
             <p>Git · GitLab · Docker · Linux/WSL · Azure · Google Cloud</p>
           </div>
           <div class="skill-card reveal">
             <div class="skill-icon orange-bg">🚗</div>
-            <h3>Automotive</h3>
+            <h3 data-i18n="filter.automotive">Automobiltechnik</h3>
             <p>CAN · UDS · DoIP · ODX · OTA · SiL · HiL · ETAS INCA</p>
           </div>
           <div class="skill-card reveal">
             <div class="skill-icon blue-bg">↻</div>
-            <h3>Workflow Automation</h3>
+            <h3 data-i18n="skills.workflow">Workflow-Automatisierung</h3>
             <p>n8n · Power Automate · Jira API · Xray</p>
           </div>
           <div class="skill-card reveal">
             <div class="skill-icon green-bg">▣</div>
             <h3>Android</h3>
-            <p>Android Studio · ADB · Logcat · Kotlin · Application Testing</p>
+            <p data-i18n="skills.android.body">Android Studio · ADB · Logcat · Kotlin · Anwendungstests</p>
           </div>
         </div>
       </div>
@@ -425,21 +420,21 @@
     <section class="section" id="education">
       <div class="container two-col">
         <div class="section-heading reveal">
-          <div class="eyebrow blue">EDUCATION</div>
-          <h2>Engineering foundation.</h2>
+          <div class="eyebrow blue" data-i18n="education.eyebrow">AUSBILDUNG</div>
+          <h2 data-i18n="education.title">Ingenieurwissenschaftliche Grundlagen.</h2>
         </div>
         <div class="education-list reveal">
           <div class="education-item">
             <span>2022–2026</span>
-            <h3>M.Eng. Mechatronics & Robotics</h3>
-            <p>Hochschule Schmalkalden, Germany</p>
-            <small>Control Engineering · Embedded Systems · Robotics · Communication Engineering</small>
+            <h3 data-i18n="education.master.title">M.Eng. Mechatronik und Robotik</h3>
+            <p data-i18n="education.master.school">Hochschule Schmalkalden, Deutschland</p>
+            <small data-i18n="education.master.subjects">Regelungstechnik · Eingebettete Systeme · Robotik · Nachrichtentechnik</small>
           </div>
           <div class="education-item">
             <span>2017–2021</span>
-            <h3>B.Tech. Mechanical Engineering</h3>
-            <p>Jawaharlal Nehru Technological University Hyderabad, India</p>
-            <small>Mechanical Engineering · Programming · Automotive Engineering · Electrical Engineering</small>
+            <h3 data-i18n="education.bachelor.title">B.Tech. Maschinenbau</h3>
+            <p data-i18n="education.bachelor.school">Jawaharlal Nehru Technological University Hyderabad, Indien</p>
+            <small data-i18n="education.bachelor.subjects">Maschinenbau · Programmierung · Fahrzeugtechnik · Elektrotechnik</small>
           </div>
         </div>
       </div>
@@ -448,16 +443,13 @@
     <section class="section contact-section" id="contact">
       <div class="container contact-card reveal">
         <div>
-          <div class="eyebrow purple">LET'S CONNECT</div>
-          <h2>Interested in software, automation or engineering systems?</h2>
-          <p>
-            I'm interested in Software Engineering, Python Development, Automation, Backend/API work,
-            Test Engineering, AI-enabled tools and Automotive Software.
-          </p>
+          <div class="eyebrow purple" data-i18n="contact.eyebrow">KONTAKT</div>
+          <h2 data-i18n="contact.title">Interesse an Software, Automatisierung oder technischen Systemen?</h2>
+          <p data-i18n="contact.body">Ich interessiere mich für Softwareentwicklung, Python-Entwicklung, Automatisierung, Backend- und API-Entwicklung, Testengineering, KI-gestützte Werkzeuge und Fahrzeugsoftware.</p>
         </div>
 
         <div class="contact-actions">
-          <a href="mailto:varshithreddy.palla@gmail.com" class="btn btn-primary">Email Me</a>
+          <a href="mailto:varshithreddy.palla@gmail.com" class="btn btn-primary" data-i18n="contact.email">E-Mail schreiben</a>
           <a href="https://www.linkedin.com/in/varshith-reddy-palla/" target="_blank" rel="noreferrer" class="btn btn-secondary">LinkedIn</a>
           <a href="https://github.com/VarshithReddyPalla" target="_blank" rel="noreferrer" class="btn btn-secondary">GitHub</a>
         </div>
@@ -468,10 +460,12 @@
   <footer>
     <div class="container footer-inner">
       <p>© <span id="year"></span> Varshith Reddy Palla</p>
-      <p>Build → Automate → Validate → Improve.</p>
+      <p data-i18n="footer.motto">Entwickeln → Automatisieren → Validieren → Verbessern.</p>
     </div>
   </footer>
 
+  <script src="locales/de.js"></script>
+  <script src="locales/en.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

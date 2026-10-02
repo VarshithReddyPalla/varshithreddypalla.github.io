@@ -7,6 +7,8 @@ Pages, with no package installation or build step required.
 ## Features
 
 - Responsive layout with mobile navigation
+- Light and dark themes (light by default), with a saved visitor preference
+- German and English content (German by default), with a saved language choice
 - Filterable project cards and scroll reveal animations
 - Experience, skills, education, and contact sections
 
@@ -16,6 +18,10 @@ Pages, with no package installation or build step required.
 index.html     Page content and metadata
 styles.css     Layout, typography, and responsive styles
 script.js      Navigation, filters, animations, and footer year
+preferences.js Restores the saved theme before the page is painted
+locales/de.js  German text
+locales/en.js  English text
+assets/       Place your German CV here as lebenslauf.pdf
 .nojekyll      Disables Jekyll processing on GitHub Pages
 .editorconfig  Shared editor formatting defaults
 .gitattributes Consistent Git line endings
@@ -76,12 +82,42 @@ See the [GitHub Pages publishing documentation](https://docs.github.com/en/pages
 
 ## Make updates
 
+### Languages and themes
+
+Edit German copy in `locales/de.js` and English copy in `locales/en.js` independently.
+Each entry has a stable key such as `projects.job.title`; keep the same keys in both
+files. Elements in `index.html` use `data-i18n="projects.job.title"` to select their
+text. Use plain text in translations, not HTML. To add a text block, add its key to
+both language files and its `data-i18n` attribute to the corresponding HTML element.
+The German text in `index.html` is also the fallback when JavaScript is unavailable;
+keep that fallback in sync when editing German content. Code examples, company
+names, and technology names can stay in their original language.
+
+Theme colors are defined at the top of `styles.css`: `:root` contains the light
+palette and `:root[data-theme="dark"]` contains dark overrides. The code sample
+keeps its dark editor appearance in both themes.
+
+New visitors start with German and the light theme. Explicit choices are stored in
+`localStorage` under `portfolio.language` and `portfolio.theme`; browser language
+and operating-system theme do not override these defaults. If storage is disabled,
+the controls continue to work for the current visit.
+
+### CV / Lebenslauf
+
+Save your German CV as `assets/lebenslauf.pdf` (exact lowercase filename).
+The header link after Kontakt/Contact is labeled **Lebenslauf** in German and
+**CV** in English. Both open the same German PDF in a new tab. No PDF is included
+yet; add your file before publishing the link. To update it later, replace the
+PDF at the same path.
+
+### Publishing changes
+
 Edit content in `index.html`, appearance in `styles.css`, and interactions in
 `script.js`. Preview changes locally and check mobile navigation, project filters,
 and contact links before publishing.
 
 ```sh
-git add index.html styles.css script.js
+git add index.html styles.css script.js preferences.js locales assets README.md
 git commit -m "Update portfolio"
 git push
 ```
