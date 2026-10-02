@@ -21,7 +21,7 @@ script.js      Navigation, filters, animations, and footer year
 preferences.js Restores the saved theme before the page is painted
 locales/de.js  German text
 locales/en.js  English text
-assets/       Place your German CV here as lebenslauf.pdf
+assets/       German CV: Varshith_Palla_Lebenslauf.pdf
 .nojekyll      Disables Jekyll processing on GitHub Pages
 .editorconfig  Shared editor formatting defaults
 .gitattributes Consistent Git line endings
@@ -104,11 +104,10 @@ the controls continue to work for the current visit.
 
 ### CV / Lebenslauf
 
-Save your German CV as `assets/lebenslauf.pdf` (exact lowercase filename).
+Save your German CV as `assets/Varshith_Palla_Lebenslauf.pdf` (match capitalization).
 The header link after Kontakt/Contact is labeled **Lebenslauf** in German and
-**CV** in English. Both open the same German PDF in a new tab. No PDF is included
-yet; add your file before publishing the link. To update it later, replace the
-PDF at the same path.
+**CV** in English. Both open the same German PDF in a new tab. To update it later,
+replace the PDF at the same path.
 
 ### Publishing changes
 
