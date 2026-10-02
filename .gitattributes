@@ -3,6 +3,7 @@
 *.css text eol=lf
 *.js text eol=lf
 *.md text eol=lf
+*.pdf binary
 .gitignore text eol=lf
 .gitattributes text eol=lf
 .editorconfig text eol=lf

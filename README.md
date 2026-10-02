@@ -4,6 +4,9 @@ Personal portfolio showcasing software engineering, Python automation, automotiv
 software, and AI projects. Built with HTML, CSS, and vanilla JavaScript for GitHub
 Pages, with no package installation or build step required.
 
+[GitHub repository](https://github.com/VarshithReddyPalla/varshithreddypalla.github.io)
+| [Portfolio URL](https://varshithreddypalla.github.io/)
+
 ## Features
 
 - Responsive layout with mobile navigation
@@ -11,6 +14,7 @@ Pages, with no package installation or build step required.
 - German and English content (German by default), with a saved language choice
 - Filterable project cards and scroll reveal animations
 - Experience, skills, education, and contact sections
+- Lebenslauf / CV navigation link opening the same German PDF in a new tab
 
 ## Project structure
 
@@ -21,7 +25,7 @@ script.js      Navigation, filters, animations, and footer year
 preferences.js Restores the saved theme before the page is painted
 locales/de.js  German text
 locales/en.js  English text
-assets/       German CV: Varshith_Palla_Lebenslauf.pdf
+assets/        German CV: Varshith_Palla_Lebenslauf.pdf and update instructions
 .nojekyll      Disables Jekyll processing on GitHub Pages
 .editorconfig  Shared editor formatting defaults
 .gitattributes Consistent Git line endings
@@ -29,6 +33,15 @@ assets/       German CV: Varshith_Palla_Lebenslauf.pdf
 ```
 
 ## Local preview
+
+To work from a new computer, clone the repository first:
+
+```sh
+git clone https://github.com/VarshithReddyPalla/varshithreddypalla.github.io.git
+cd varshithreddypalla.github.io
+```
+
+If you already have this project open locally, use its existing folder.
 
 You can open `index.html` directly in a browser, or run a small local server:
 
@@ -44,39 +57,31 @@ http://localhost:8000
 
 Stop the server with `Ctrl+C`.
 
-## Push to GitHub
+## Repository
 
-This local repository is initialized on `main` with an initial commit.
+The working branch is `main`, tracking `origin/main`. The remote is:
 
-1. Create an **empty** repository on GitHub. Leave the options to add a README,
-   license, and `.gitignore` unchecked, since the local history already exists.
-2. For a personal GitHub Pages site, name it `<username>.github.io`. For example,
-   if your account is `VarshithReddyPalla`, use `varshithreddypalla.github.io`.
-3. Copy the repository's HTTPS URL, then run these commands from this folder,
-   replacing `YOUR_USERNAME` and `YOUR_REPOSITORY`:
-
-```sh
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
+```text
+https://github.com/VarshithReddyPalla/varshithreddypalla.github.io.git
 ```
 
-Authenticate with your GitHub account when prompted. If you already added a
-remote, inspect it with `git remote -v` and use `git remote set-url origin URL`
-to correct it if needed.
+Use `git status` to review local changes and `git remote -v` to inspect the remote.
+The repository is already initialized; there is no need to run `git init` or add
+`origin` again. See **Publishing changes** below for routine updates.
 
 ## Publish with GitHub Pages
 
-After the first push:
+To enable or check deployment in the GitHub repository:
 
 1. Open the repository's **Settings > Pages**.
 2. Under **Build and deployment**, select **Deploy from a branch**.
 3. Choose **main** and **/ (root)**, then **Save**.
 4. Wait for the Pages deployment to complete; the Pages settings show the site URL.
 
-A repository named `<username>.github.io` publishes at
-`https://<username>.github.io/`. Other repository names publish at
-`https://<username>.github.io/<repository>/`. The site's relative asset links
-support both layouts. Use a public repository for GitHub Pages on GitHub Free.
+The expected address for this repository is
+<https://varshithreddypalla.github.io/>. Check the Pages settings and deployment
+status on GitHub to confirm publication. Relative asset paths also support
+hosting the site under a repository subpath.
 
 See the [GitHub Pages publishing documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
@@ -102,6 +107,10 @@ New visitors start with German and the light theme. Explicit choices are stored 
 and operating-system theme do not override these defaults. If storage is disabled,
 the controls continue to work for the current visit.
 
+To check the first-visit defaults again, clear this site's local storage in your
+browser's developer tools, then reload. The language scripts load directly, so
+switching languages also works when opening `index.html` from disk.
+
 ### CV / Lebenslauf
 
 Save your German CV as `assets/Varshith_Palla_Lebenslauf.pdf` (match capitalization).
@@ -109,19 +118,33 @@ The header link after Kontakt/Contact is labeled **Lebenslauf** in German and
 **CV** in English. Both open the same German PDF in a new tab. To update it later,
 replace the PDF at the same path.
 
+Only the link label changes with the selected language; the PDF stays German.
+The link does not force a download. Browsers with PDF viewing enabled display it
+directly; the visitor's browser settings can choose download behavior instead.
+
 ### Publishing changes
 
-Edit content in `index.html`, appearance in `styles.css`, and interactions in
-`script.js`. Preview changes locally and check mobile navigation, project filters,
-and contact links before publishing.
+Edit translated text in `locales/de.js` and `locales/en.js`, the page structure and
+German fallback in `index.html`, appearance in `styles.css`, and interactions in
+`script.js`. Keep `preferences.js` before the stylesheet so a saved theme applies
+before the page is painted.
+
+Before publishing, preview both languages and themes at desktop and mobile widths.
+Check navigation, project filters, contact links, and the PDF. Reload to verify
+that language and theme choices persist.
 
 ```sh
-git add index.html styles.css script.js preferences.js locales assets README.md
+git status
+git diff --check
+git add README.md assets index.html styles.css script.js preferences.js locales .gitattributes
+git diff --cached --stat
 git commit -m "Update portfolio"
-git push
+git push origin main
 ```
 
-Once Pages is enabled, pushes to `main` trigger a new deployment.
+Stage only files you intend to publish. Once Pages is enabled, pushes to `main`
+trigger a new deployment. No npm install, build command, or custom workflow is
+required for this static site.
 
 ## Notes
 
