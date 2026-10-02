@@ -1,0 +1,25 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+.aws/
+
+# Local tooling and generated files
+.codex/
+node_modules/
+__pycache__/
+.venv/
+venv/
+*.log
