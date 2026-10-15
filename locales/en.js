@@ -72,6 +72,7 @@ window.portfolioLocales.en = {
   "projects.diagnostics.problem": "Diagnostic datasets across XML, ODX, ECU and spreadsheet formats required repetitive manual comparison.",
   "projects.diagnostics.architecture": "Source datasets → Python extraction → normalization → comparison → technical analysis.",
   "projects.diagnostics.outcome": "Reduced manual analysis effort by approximately 80% in one recurring workflow.",
+  "projects.diagnostics.confidential": "Professional project — public description contains only non-confidential concepts.",
   "projects.pdf.title": "PDF Utility Toolkit",
   "projects.pdf.lead": "Reusable Python utilities for common PDF-processing and file-handling tasks.",
   "projects.pdf.focus": "Document validation, controlled PDF processing and command-line workflows for files I own or am authorized to modify.",
