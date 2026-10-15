@@ -89,6 +89,7 @@ window.portfolioLocales.de = {
   "experience.thesis.body": "Entwicklung eines modularen Python-Testframeworks zur Integration von Simulations-, Mess- und Fahrzeugumgebungen mit automatisierten Prüfungen, REST-Kommunikation, Visualisierung und Berichterstellung.",
   "experience.audi.role": "Fahrzeugdiagnose, OTA und Datenanalyse",
   "experience.audi.body": "Entwicklung von Python-Werkzeugen zur Diagnosedatenverarbeitung und Automatisierung, Unterstützung von UDS-/OTA-Workflows und deutliche Reduzierung des manuellen Analyseaufwands in einem wiederkehrenden Prozess.",
+  "experience.audi.confidential": "Berufliches Projekt – die öffentliche Beschreibung enthält ausschließlich nicht vertrauliche Konzepte.",
   "skills.eyebrow": "WERKZEUGE",
   "skills.title": "Technologien, mit denen ich arbeite.",
   "skills.languages": "Programmiersprachen",
